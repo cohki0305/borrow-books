@@ -8,24 +8,6 @@ require 'amazon/ecs'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-# Amazon::Ecs.options = {
-#   :associate_tag =>     ENV['ACCOCIATE_TAG'],
-#   :AWS_access_key_id => ENV['ACCESS_KYE'],
-#   :AWS_secret_key =>    ENV['SECRET_KYE']
-# }
-
-# Amazon::Ecs.configure do |options|
-#   options[:AWS_access_key_id] = 'AKIAIAX6LQGTLORGY3NQ'
-#   options[:AWS_secret_key] = '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'
-#   options[:associate_tag] = 'cohki0305-22'
-# end
-
-Amazon::Ecs.configure do |options|
-  options[:AWS_access_key_id] = 'AKIAIAX6LQGTLORGY3NQ'
-  options[:AWS_secret_key] = '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'
-  options[:associate_tag] = 'cohki0305-22'
-end
-
 
 module BooksProject
   class Application < Rails::Application
