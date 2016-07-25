@@ -23,3 +23,8 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+
+export ACCOCIATE_TAG = 'cohki0305-22'
+export ACCESS_KYE = 'AKIAIAX6LQGTLORGY3NQ'
+export SECRET_KYE = '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'
