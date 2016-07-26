@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   devise_for :users
   get 'regisrates' => 'regisrates#new', as: 'regisrates_new'
   post 'regisrates/create' => 'regisrates#create', as: 'regisrates_create'
+  get 'search/books' => 'books#search', as: 'search_books'
 
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # See how all your routes lay out with "rake routes".'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
