@@ -1,2 +1,12 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_tag "#{@book.image_url}",  :class => "image_book"%>
+    </div>
+    <div class="col-md-9">
+      <h1><%=@book.title%></h1>
+      <p><%=@book.author%>（著）</p>
+    </div>
+  </div>
+
+</div>

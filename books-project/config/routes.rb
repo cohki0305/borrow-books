@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'regisrates' => 'regisrates#new', as: 'regisrates_new'
   post 'regisrates/create' => 'regisrates#create', as: 'regisrates_create'
   get 'search/books' => 'books#search', as: 'search_books'
+  get 'books/:id' => 'books#show', as: 'show_books'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".'

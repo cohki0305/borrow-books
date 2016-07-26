@@ -22,3 +22,16 @@
 body{
   background-color: #ecf0f1;
 }
+
+.navigation-bar{
+  width: 100%;
+  height: 80px;
+  background-color: #232F3E;
+  margin-bottom: 30px;
+}
+
+.image_book{
+  height: 250px;
+  width: auto;
+  margin-top: 20px;
+}
