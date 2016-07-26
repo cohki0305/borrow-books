@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="navigation-bar">
+    <form action="/" name="search" method="get" class="search-form col-sm-offset-3 col-sm-4">
+      <form action="/" name="search2" method="post">
+      	<dl class="search2">
+      		<dt><input type="text" name="search" value="" placeholder="type" /></dt>
+      		<dd><button>Search</button></dd>
+      	</dl>
+      </form>
+  </form>
+
+  </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+
 <%= yield %>
 
 </body>
