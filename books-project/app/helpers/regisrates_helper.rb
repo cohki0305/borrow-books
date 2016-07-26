@@ -1,0 +1,2 @@
+module RegisratesHelper
+end
