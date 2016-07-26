@@ -11,12 +11,13 @@ class RegisratesController < ApplicationController
       title = item.get('ItemAttributes/Title')
       author = item.get('ItemAttributes/Author')
       image = item.get('LargeImage/URL')
-
+      editorial_review = item.get('EditorialReviews/EditorialReview/Content')
       book = Book.new(
         isbn: isbn,
         title: title,
         author: author,
-        image_url: image
+        image_url: image,
+        editorial_review: editorial_review,
       )
 
 
