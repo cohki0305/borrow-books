@@ -1,0 +1,55 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.search-form{
+  padding-top: 15px;
+}
+
+dl.search2{
+	position:relative;
+}
+dl.search2 dt{
+	margin-right:105px;
+	padding:8px;
+	background-color:#fff;
+	border:1px solid #aaa;
+}
+dl.search2 dt input{
+	height:24px;
+	line-height:24px;
+	background:none;
+	border:none;
+}
+dl.search2 dd{
+	position:absolute;
+	top:0;
+	right:50px;
+}
+dl.search2 dd button{
+	display:block;
+	width:50px;
+	height:42px;
+	color:#fff;
+	line-height:40px;
+	text-align:center;
+	background-color:#232F3E;
+	border:1px solid #FF9900;
+}
+
+dl.search2 dd button:hover{
+  background-color:#FF9900;
+}
+
+
+.fa-amazon{
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.fa-search{
+    color: white;
+}
