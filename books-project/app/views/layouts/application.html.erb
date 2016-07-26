@@ -8,18 +8,28 @@
 </head>
 <body>
   <div class="navigation-bar">
-    <form action="/" name="search" method="get" class="search-form col-sm-offset-3 col-sm-4">
-      <form action="/" name="search2" method="post">
-      	<dl class="search2">
-      		<dt><input type="text" name="search" value="" placeholder="type" /></dt>
-      		<dd><button>Search</button></dd>
-      	</dl>
-      </form>
-  </form>
+    <div class="continer">
+      <div class="row">
+        <div class="col-sm-2">
+          <i class="fa fa-amazon  fa-3x"></i>
+        </div>
 
-  </div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+        <form action="/" name="search" method="get" class="search-form col-sm-offset-1 col-sm-4">
+          <form action="/" name="search2" method="post">
+            <dl class="search2">
+              <dt><input type="text" name="search" value="" placeholder="type" /></dt>
+              <dd><button>Search</button></dd>
+            </dl>
+          </form>
+        </form>
+      </div>
+    </div>
+    <i class="fa fa-twitter"></i>
+
+
+
+
+</div>
 
 <%= yield %>
 
