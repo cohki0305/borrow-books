@@ -8,7 +8,7 @@ class RegisratesController < ApplicationController
     amazon_book = Amazon::Ecs.item_search('#{isbn}', :search_index => 'All', :country => 'jp',  :response_group => 'Large')
 
       item_attributes = amazon_book.get_element('ItemAttributes')
-      image = amazon_book.items.first.get_hash('SmallImage')
+      image = amazon_book.items.get('LargeImage/URL')
 
       @book = Book.new(
         isbn: isbn,
