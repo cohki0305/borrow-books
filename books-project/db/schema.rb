@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726001542) do
+ActiveRecord::Schema.define(version: 20160726030221) do
 
   create_table "books", force: :cascade do |t|
     t.string   "isbn"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160726001542) do
     t.string   "author"
     t.string   "publish_company"
     t.date     "published_day"
+    t.string   "image_url"
   end
 
   create_table "reviews", force: :cascade do |t|
