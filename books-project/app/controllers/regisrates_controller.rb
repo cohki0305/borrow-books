@@ -20,8 +20,6 @@ class RegisratesController < ApplicationController
         editorial_review: editorial_review,
       )
 
-
-
       if book.save
         redirect_to regisrates_new_path
       else

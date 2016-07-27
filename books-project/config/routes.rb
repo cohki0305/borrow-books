@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'search/books' => 'books#search', as: 'search_books'
   get 'books/:id' => 'books#show', as: 'show_books'
   get 'books' => 'books#index', as: 'index_books'
+  get 'regisrate_results' => 'books#regisrate_results', as: 'regisrate_results'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".'
