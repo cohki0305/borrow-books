@@ -9,6 +9,6 @@ class BooksController < ApplicationController
 
   def search
     search_words = params[:words]
-    @amazon_book = Amazon::Ecs.item_search('#{search_words}', :search_index => 'All', :country => 'jp',  :response_group => 'Large')
+    @items = Amazon::Ecs.item_search(search_words, :search_index => 'All', :country => 'jp',  :response_group => 'Large').items
   end
 end

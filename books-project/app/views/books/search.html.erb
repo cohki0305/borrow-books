@@ -1,0 +1,7 @@
+<%@items.each do |item|%>
+  <%=item.get('ItemAttributes/Title')%><br>
+  <%=item.get('ItemAttributes/Author')%><br>
+  <%=image_tag "#{item.get('LargeImage/URL')}"%><br>
+  <%= item.get('EditorialReviews/EditorialReview/Content') %><br>
+  <br>
+<%end%>
