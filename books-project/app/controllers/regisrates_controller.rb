@@ -21,9 +21,9 @@ class RegisratesController < ApplicationController
       )
 
       if book.save
-        redirect_to regisrates_new_path
+        redirect_to show_books_path(book.id)
       else
-        redirect_to root_path
+        redirect_to regisrates_new_path
       end
   end
 
