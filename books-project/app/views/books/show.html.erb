@@ -3,10 +3,13 @@
     <div class="col-md-3">
       <%= image_tag "#{@book.image_url}",  :class => "image_book"%>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-6" style="text-align:left;">
       <h1><%=@book.title%></h1>
       <p><%=@book.author%>（著）</p>
       <p><%=@book.editorial_review%></p>
+    </div>
+    <div class="col-md-3 borrow-information">
+      <h3 style="text-align: center;">貸し出し状況</h3>
     </div>
   </div>
 
