@@ -22,4 +22,12 @@
     <%end%>
   </div>
 
+  <div class="row">
+    <%@reviews.each do |review|%>
+      <%=review.degree%>
+      <%=review.content%>
+      <br>
+    <%end%>
+  </div>
+
 </div>
