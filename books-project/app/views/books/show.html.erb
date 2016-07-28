@@ -14,12 +14,11 @@
   </div>
 
   <div class="row">
-    <%=form_for(@review, url:create_reviews_path, method: 'post') do |f|%>
-      <%=f.label :degree%>
-      <%=f.text_field :degree%>
-      <%=f.label :content%>
-      <%=f.tex_area :content%>
-      <%=f.submit '投稿'%>
+    <%=form_tag create_reviews_path, method: 'post' do%>
+      <%= hidden_field_tag :book_id, @book.id%>
+      <%=text_field_tag :degree%>
+      <%=text_area_tag :content%>
+      <%=submit_tag '投稿'%>
     <%end%>
 
   </div>

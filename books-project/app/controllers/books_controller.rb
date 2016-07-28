@@ -5,6 +5,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @review = @book.reviews.build
   end
 
   def search
@@ -16,6 +17,5 @@ class BooksController < ApplicationController
   def regisrate_results
     item = params[:title]
   end
-
 
 end

@@ -1,16 +1,14 @@
 class ReviewsController < ApplicationController
-
   def create
-    @review = Book.reviews.build(params_review)
-    if @review.save
-      redirect_to show_books_path(@review.book)
+    book = Book.find_by(id: params[:book_id])
+    degree = params[:degree]
+    content = params[:content]
+    review = book.reviews.build(degree: degree, content: content)
+    if review.save
+      redirect_to show_books_path(review.book_id)
     else
-      redirect_to show_books_path(@review.book)
+      redirect_to show_books_path(review.book_id)
     end
   end
 
-  private
-  def params_review
-    params.permit(:review).require(:degree, :content)
-  end
 end
