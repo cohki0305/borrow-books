@@ -29,3 +29,11 @@ body{
   background-color: #232F3E;
   margin-bottom: 30px;
 }
+
+.fa-sign-in{
+  color: white;
+}
+
+.fa-sign-out{
+  color: white;
+}

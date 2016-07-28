@@ -11,7 +11,10 @@
     <div class="continer">
       <div class="row">
         <div class="col-md-2">
-          <a href="http://localhost:3000/"><i class="fa fa-amazon  fa-3x"></i></a>
+          <%=link_to root_path do%>
+            <i class="fa fa-amazon  fa-3x"></i>
+          <!-- <a href="http://localhost:3000/"><i class="fa fa-amazon  fa-3x"></i></a> -->
+          <%end%>
 
         </div>
 
@@ -26,9 +29,13 @@
         </form>
         <div class="col-md-3">
           <%if user_signed_in?%>
-            <%=link_to "Logout", destroy_user_session_path, method: 'delete'%>
+            <%=link_to destroy_user_session_path, method: 'delete' do%>
+              Logout
+            <%end%>
           <%else%>
-            <%=link_to "Login", new_user_session_path%>
+            <%=link_to new_user_session_path do%>
+              Login
+            <%end%>
           <%end%>
         </div>
       </div>
