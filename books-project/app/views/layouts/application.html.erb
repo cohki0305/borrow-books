@@ -10,11 +10,12 @@
   <div class="navigation-bar">
     <div class="continer">
       <div class="row">
-        <div class="col-sm-2">
-          <i class="fa fa-amazon  fa-3x"></i>
+        <div class="col-md-2">
+          <a href="http://localhost:3000/"><i class="fa fa-amazon  fa-3x"></i></a>
+
         </div>
 
-        <form action="/" name="search" method="get" class="search-form col-sm-offset-1 col-sm-5">
+        <form action="/" name="search" method="get" class="search-form col-md-offset-1 col-md-5">
           <form action="/" name="search2" method="post">
             <dl class="search2">
               <dt><input type="text" name="search" value="" placeholder="type" /></dt>
@@ -23,10 +24,21 @@
             </dl>
           </form>
         </form>
+        <div class="col-md-3">
+          <%if user_signed_in?%>
+            <%=link_to "Logout", destroy_user_session_path, method: 'delete'%>
+          <%else%>
+            <%=link_to "Login", new_user_session_path%>
+          <%end%>
+        </div>
       </div>
     </div>
 
 
+
+</div>
+<div class="container">
+  <%= bootstrap_flash %>
 
 </div>
 
