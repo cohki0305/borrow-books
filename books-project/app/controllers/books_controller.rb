@@ -16,4 +16,6 @@ class BooksController < ApplicationController
   def regisrate_results
     item = params[:title]
   end
+
+
 end
