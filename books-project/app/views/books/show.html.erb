@@ -10,6 +10,15 @@
     </div>
     <div class="col-md-3 borrow-information">
       <h3 style="text-align: center;">貸し出し状況</h3>
+
+      <h4>借りる</h4>
+
+      <%=form_tag create_borrows_path, method: 'post' do%>
+        <%=hidden_field_tag :book_id, @book.id%>
+        <%= date_field_tag :return_date%>
+        <%= submit_tag '借りる'%>
+      <%end%>
+
     </div>
   </div>
 
