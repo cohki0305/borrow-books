@@ -1,4 +1,7 @@
 class ReviewsController < ApplicationController
+
+  before_action :authenticate_user!
+
   def create
     book = Book.find_by(id: params[:book_id])
     degree = params[:degree]

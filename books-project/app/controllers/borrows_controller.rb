@@ -1,5 +1,6 @@
 class BorrowsController < ApplicationController
-  
+  before_action :authenticate_user!
+
   def create
     book_id = params[:book_id]
     return_date = params[:return_date]
