@@ -26,5 +26,4 @@ class RegisratesController < ApplicationController
         redirect_to regisrates_new_path
       end
   end
-
 end
