@@ -21,10 +21,9 @@
           = submit_tag '借りる'
       -else
         h4 貸出中
-
   
   -array = []
-  - 5.times{|t| array.push(t+1)}
+  -5.times{|t| array.push(t+1)}
     
   .row
     =form_tag create_reviews_path, method: 'post' do
