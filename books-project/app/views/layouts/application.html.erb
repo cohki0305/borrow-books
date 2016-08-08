@@ -9,48 +9,52 @@
 
 </head>
 <body>
-  <div class="navigation-bar">
-    <div class="continer">
-      <div class="row">
-        <div class="col-md-2">
-          <%=link_to root_path do%>
-            <i class="fa fa-amazon  fa-3x"></i>
-          <%end%>
+  <header>
+    <div class="navigation-bar">
+      <div class="continer">
+        <div class="row">
+          <div class="col-md-2">
+            <%=link_to root_path do%>
+              <i class="fa fa-amazon  fa-3x"></i>
+            <%end%>
 
-        </div>
+          </div>
 
-        <form action="/" name="search" method="get" class="search-form col-md-offset-1 col-md-5">
-          <form action="/" name="search2" method="post">
-            <dl class="search2">
-              <dt><input type="text" name="search" value="" placeholder="type" /></dt>
+          <form action="/" name="search" method="get" class="search-form col-md-offset-1 col-md-5">
+            <form action="/" name="search2" method="post">
+              <dl class="search2">
+                <dt><input type="text" name="search" value="" placeholder="type" /></dt>
 
-              <dd><button><i class="fa fa-search fa-1x"></i></button></dd>
-            </dl>
+                <dd><button><i class="fa fa-search fa-1x"></i></button></dd>
+              </dl>
+            </form>
           </form>
-        </form>
-        <div class="col-md-3">
-          <%if user_signed_in?%>
-            <%=link_to destroy_user_session_path, method: 'delete' do%>
-              Logout
+          <div class="col-md-3">
+            <%if user_signed_in?%>
+              <%=link_to destroy_user_session_path, class: "login-logout", method: 'delete' do%>
+                Logout
+              <%end%>
+            <%else%>
+              <%=link_to new_user_session_path class: "login-logout" do%>
+                Login
+              <%end%>
             <%end%>
-          <%else%>
-            <%=link_to new_user_session_path do%>
-              Login
-            <%end%>
-          <%end%>
+          </div>
         </div>
       </div>
     </div>
+  </header>
 
-
-
-</div>
 <div class="container">
   <%= bootstrap_flash %>
 
 </div>
 
 <%= yield %>
+
+<div class="plus">
+  +
+</div>
 
 </body>
 </html>
