@@ -21,10 +21,10 @@
           = date_field_tag :return_date
           = submit_tag '借りる'
       -else
-        h4 貸出中
-        = link_to '返す', return_books_path(book_id: @book.id), :method => 'patch'
-        
-    
+        -if @book.current_user_borrowed_book?(current_user)
+          = link_to '返す', return_books_path(book_id: @book.id), :method => 'patch'
+        -else 
+          h4 貸出中
 
   
   -array = []

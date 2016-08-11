@@ -7,4 +7,9 @@ class Book < ActiveRecord::Base
   def borrowable?
     self.borrows.find_by(status: true) ? false : true
   end
+
+  def current_user_borrowed_book?(current_user)
+    now_borrow = self.borrows.find_by(status: true)
+    now_borrow.user.id == current_user.id ? true : false
+  end
 end
