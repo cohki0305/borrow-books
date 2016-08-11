@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'regisrate_results' => 'books#regisrate_results', as: 'regisrate_results'
   post 'reviews/create' => 'reviews#create', as: 'create_reviews'
   post 'borrow/create' => 'borrows#create', as: 'create_borrows'
+  patch 'books/return' => 'borrows#return_book', as: 'return_books'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".'
