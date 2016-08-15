@@ -1,0 +1,14 @@
+
+.container
+
+  .row
+    =form_tag  search_books_path, method: 'get' do
+      = text_field_tag :words
+      = submit_tag '検索'
+
+  
+  .row
+    -@ranking_reviews.each do |review|
+      = review.degree
+      = review.book.title 
+      br

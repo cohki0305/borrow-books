@@ -7,7 +7,9 @@
     .col-md-6
       h1 = @book.title
       p #{@book.author} 著 
-      p =@book.editorial_review
+      p = @book.editorial_review
+      p = average_degree(@reviews)
+      
   
     .col-md-3.borrow-information
       h3 貸し出し状況
