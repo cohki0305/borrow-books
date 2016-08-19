@@ -7,6 +7,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @review = @book.reviews.build
     @reviews = @book.reviews.all
+    @average_degree = @reviews.average(:degree).to_f.round(3)
   end
 
   def search

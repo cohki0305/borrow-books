@@ -12,7 +12,7 @@ class BorrowsController < ApplicationController
         redirect_to show_books_path(book)
       else
         redirect_to show_books_path(book)
-        flash[:error] = "返却日を入力してください。" if book.isbn.empty?
+        flash[:error] = "返却日を入力してください。"
       end
     end
   end
