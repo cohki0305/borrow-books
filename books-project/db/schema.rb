@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 20160728235057) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "author"
-    t.string   "publish_company"
-    t.date     "published_day"
     t.string   "image_url"
     t.text     "editorial_review"
   end

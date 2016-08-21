@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/profile' => 'users#show', as: 'user_profile'
+
   get 'books/index'
 
   get 'books/show'
@@ -15,6 +17,8 @@ Rails.application.routes.draw do
   post 'reviews/create' => 'reviews#create', as: 'create_reviews'
   post 'borrow/create' => 'borrows#create', as: 'create_borrows'
   patch 'books/return' => 'borrows#return_book', as: 'return_books'
+  patch 'users/return' => 'borrows#return_book_from_user_page', as: 'user_return_books'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".'

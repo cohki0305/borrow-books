@@ -29,4 +29,16 @@ class BorrowsController < ApplicationController
     end
   end
 
+  def return_book_from_user_page
+    borrow_id = params[:borrow_id]
+    borrow = Borrow.find(borrow_id)
+
+    if borrow.update(status: false)
+      redirect_to user_profile_path
+    else
+      redirect_to root_path
+    end
+
+  end
+
 end
