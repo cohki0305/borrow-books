@@ -19,4 +19,4 @@
       td = borrow.created_at
       td = borrow.return_date
       td Late
-      td = link_to '返す', user_return_books_path(borrow_id: borrow.id), :method => 'patch'
+      td = link_to '返す', user_return_books_path(borrow_id: borrow.id), :method => 'patch', :class => 'btn btn-primary'
