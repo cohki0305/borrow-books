@@ -1,0 +1,22 @@
+.container
+
+  = current_user.email
+  br
+  = now_borroing_books(current_user).count
+  br
+
+  table.table-hover.table
+   thead
+    tr
+      th title
+      th 借りた日 
+      th 返却日    
+      th status 
+   tbody
+   - now_borroing_books(current_user).each do |borrow|
+    tr
+      td = borrow.book.title
+      td = borrow.created_at
+      td = borrow.return_date
+      td Late
+      td = link_to '返す', user_return_books_path(borrow_id: borrow.id), :method => 'patch'
