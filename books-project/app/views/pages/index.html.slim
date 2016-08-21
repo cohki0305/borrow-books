@@ -5,5 +5,9 @@
     =form_tag  search_books_path, method: 'get' do
       = text_field_tag :words
       = submit_tag '検索'
-
+  .row
+   - @top_four_books.each do |book|
+    = book[0].title 
+    = book[1]
+    br
   
