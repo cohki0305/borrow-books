@@ -6,10 +6,14 @@
       =form_tag search_books_path, method: 'get' do
         .form-group
           = text_field_tag :words, "本を登録する" ,:class => 'form-control'
+        div
           = submit_tag '検索', :class => 'btn btn-primary'
   .row
    - @top_four_books.each do |book|
-    = book[0].title 
-    = book[1]
-    = image_tag "#{book[0].image_url}",  :class => "image_book"
-    br
+    .col-md-3.text-center
+      = book[0].title 
+      = book[1]
+      = book[0].editorial_review
+      br
+      = image_tag "#{book[0].image_url}",  :class => "image_book"
+      br

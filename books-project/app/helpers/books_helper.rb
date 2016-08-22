@@ -10,6 +10,5 @@ module BooksHelper
     user_id = book.borrows.find_by(status: true).user_id
     return user_id
   end
-
-
+  
 end
