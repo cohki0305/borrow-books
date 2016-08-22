@@ -7,6 +7,7 @@ class Borrow < ActiveRecord::Base
 
   private
   def validate_return_date
-   errors.add(:return_date, "今日以降で返却日を指定してください") if Time.now > self.return_date
+   self.created_at = Time.now if self.created_at == nil
+   errors.add(:return_date, "") if self.created_at > self.return_date
   end
 end
