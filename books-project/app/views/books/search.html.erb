@@ -1,10 +1,12 @@
 <div class="container">
   <%@items.each do |item|%>
-    <%=item.get('ItemAttributes/Title')%><br>
-    <%=item.get('ItemAttributes/Author')%><br>
-    <%=image_tag "#{item.get('LargeImage/URL')}"%><br>
-    <%= item.get('EditorialReviews/EditorialReview/Content') %><br>
-    <%= link_to '登録する', regisrates_create_path(isbn: item.get('ItemAttributes/ISBN')), method: 'post'%>
-    <br>
+    <div class="col-md-4">
+      <%=item.get('ItemAttributes/Title')%><br>
+      <%=item.get('ItemAttributes/Author')%><br>
+      <%=image_tag "#{item.get('LargeImage/URL')}"%><br>
+      <%= item.get('EditorialReviews/EditorialReview/Content') %><br>
+      <%= link_to '登録する', regisrates_create_path(isbn: item.get('ItemAttributes/ISBN')), method: 'post'%>
+      <br>
+    </div>
   <%end%>
 </div>
