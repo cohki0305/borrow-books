@@ -15,13 +15,13 @@
       h3 貸し出し状況
       
       -if @book.borrowable?
-
-        h4 借りる
-
-        = form_tag create_borrows_path, method: 'post' do
-          = hidden_field_tag :book_id, @book.id
-          = date_field_tag :return_date
-          = submit_tag '借りる'
+        
+        .form-group
+          = form_tag create_borrows_path, method: 'post' do
+            = hidden_field_tag :book_id, @book.id
+            = date_field_tag :return_date, "" ,:class => 'form-control'
+            = submit_tag '借りる', :class => "btn btn-primary"
+            
       -else
         -if @book.current_user_borrowed_book?(current_user)
           = link_to '返す', return_books_path(book_id: @book.id), :method => 'patch'
