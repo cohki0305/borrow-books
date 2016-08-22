@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     book_ranking
   end
 
+  private
   def book_ranking
     @all_books = Book.all
     @tmp_array = Array.new
@@ -16,9 +17,7 @@ class PagesController < ApplicationController
         @tmp_array << [book, 0]
       end
     end
-
     @tmp_array.sort!{|array_one , array_two| array_two[1] <=> array_one[1]}
-
     @top_four_books = @tmp_array[0..4]
   end
 
